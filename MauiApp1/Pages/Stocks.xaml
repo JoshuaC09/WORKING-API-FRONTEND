@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.Stocks"
+             Title="Stocks">
+    <VerticalStackLayout Padding="10">
+        <Entry x:Name="Param1Entry" Placeholder="Enter param1" />
+        <Entry x:Name="Param2Entry" Placeholder="Enter param2" />
+        <Button Text="Execute" Clicked="ExecuteButton_Clicked" />
+        <CollectionView x:Name="StocksCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="5" ColumnSpacing="10" RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <!-- Row for column headers -->
+                            <RowDefinition Height="Auto" />
+                            <!-- Row for data rows -->
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Column headers -->
+                        <Label Grid.Row="0" Grid.Column="0" Text="Stock Code" FontAttributes="Bold" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Item Number" />
+                        <Label Grid.Row="0" Grid.Column="2" Text="Location" />
+                        <Label Grid.Row="0" Grid.Column="3" Text="Sub Location" />
+                        <Label Grid.Row="0" Grid.Column="4" Text="Source UOM" />
+                        <Label Grid.Row="0" Grid.Column="5" Text="Lot Number" />
+                        <Label Grid.Row="0" Grid.Column="6" Text="Expiration Date" />
+                        <Label Grid.Row="0" Grid.Column="7" Text="Available Quantity" />
+                        <Label Grid.Row="0" Grid.Column="8" Text="Actual Quantity" />
+                        <Label Grid.Row="0" Grid.Column="9" Text="Log Date Time" />
+
+                        <!-- Data rows -->
+                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding StkSCode}" />
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding StkItemNo}" />
+                        <Label Grid.Row="1" Grid.Column="2" Text="{Binding StkLocation}" />
+                        <Label Grid.Row="1" Grid.Column="3" Text="{Binding StkSubLocation}" />
+                        <Label Grid.Row="1" Grid.Column="4" Text="{Binding StkSourceUOM}" />
+                        <Label Grid.Row="1" Grid.Column="5" Text="{Binding StkLotNo}" />
+                        <Label Grid.Row="1" Grid.Column="6" Text="{Binding StkExpiration}" />
+                        <Label Grid.Row="1" Grid.Column="7" Text="{Binding StkAvailableQty}" />
+                        <Label Grid.Row="1" Grid.Column="8" Text="{Binding StkActualQty}" />
+                        <Label Grid.Row="1" Grid.Column="9" Text="{Binding StkLogDateTime}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
