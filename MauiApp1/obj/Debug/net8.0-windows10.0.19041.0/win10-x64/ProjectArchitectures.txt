@@ -1,1 +1,1 @@
-D:\Canapi_Joshua_Intern_PUPSMB\MAUI FRONTEND DEVELOPMENT\MauiApp1\MauiApp1.csproj;x64
+C:\Canapi_Joshua_Intern_Projects\Working API FrontEnd\WORKING-API-FRONTEND\MauiApp1\MauiApp1.csproj;x64

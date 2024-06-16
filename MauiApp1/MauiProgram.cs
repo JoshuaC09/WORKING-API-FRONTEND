@@ -20,7 +20,7 @@ namespace MauiApp1
             builder.Services.AddHttpClient<HttpClientService>(client =>
             {
                 var baseAddress = DeviceInfo.Platform == DevicePlatform.Android
-                    ? "http://10.0.2.2:7059/"
+                    ? "http://10.0.2.2:56114/"
                     : "http://localhost:7059/";
 
                 client.BaseAddress = new Uri(baseAddress);
